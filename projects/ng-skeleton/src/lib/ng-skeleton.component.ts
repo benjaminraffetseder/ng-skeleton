@@ -7,22 +7,36 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NgSkeletonComponent implements OnInit {
 
+  @Input() skelBackground: string;
+
   @Input() skelWidth: number;
   @Input() skelHeight: number;
+  @Input() skelSpeed: number;
+
   @Input() skelCircle: boolean;
+  @Input() skelLight: boolean;
+  @Input() skelDark: boolean;
+
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
-  getStyles() {
-    const myStyles = {
+  skeletonOptions() {
+    const skeletonOptions = {
       'width.px': this.skelWidth ? this.skelWidth : '',
       'height.px': this.skelHeight ? this.skelHeight : '',
-      'border-radius': this.skelCircle ? '50%' : ''
+      'border-radius': this.skelCircle ? '50%' : '',
+      'background-color': this.skelBackground ? this.skelBackground : ''
     };
-    return myStyles;
+    return skeletonOptions;
   }
-
+  loadingOptions() {
+    const loadingOptions = {
+      animation: this.skelSpeed
+        ? `loading ease-in-out ${this.skelSpeed}ms infinite`
+        : 'loading 1s infinite ease-in-out',
+    };
+    return loadingOptions;
+  }
 }
