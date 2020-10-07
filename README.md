@@ -1,27 +1,83 @@
-# NgSkeleton
+![alt text](https://api.benjamin-raffetseder.com/storage/uploads/2020/10/07/5f7d63fac6831ngskeleton.gif "Ng-Skeleton Preview")
+<h1 align="center">Ng-Skeleton</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+#### Stackblitz Example 
 
-## Development server
+[https://stackblitz.com/edit/ng-skeleton-demo](https://stackblitz.com/edit/ng-skeleton-demo) 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Overview
 
-## Code scaffolding
+* [Install](#install)
+* [Usage](#usage)
+* [Options](#options)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Install
 
-## Build
+```
+npm install ng-skeleton --save
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Usage
 
-## Running unit tests
+Add ```NgSkeletonModule``` to your module's ```imports```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
 
-## Running end-to-end tests
+import { NgSkeletonModule } from 'ng-skeleton';
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+@NgModule({
+  imports: [BrowserModule, NgSkeletonModule],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
+})
 
-## Further help
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+And then use it in your component
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'example-app',
+  template: `<ng-skeleton></ng-skeleton>`
+})
+export class AppComponent {
+}
+```
+
+## Options
+* [[skelCircle]](#skelCircle)
+* [[skelWidth]](#skelWidth)
+* [[skelHeight]](#skelHeight)
+
+#### [skelCircle]
+
+| Property | Type | Required | |
+| --- | ---- | --- | --- |
+| [skelCircle] | *boolean* | Optional | Displays the component as a circle |
+
+#### [skelWidth]
+
+| Property | Type | Required |  |
+| --- | ---- | --- | --- |
+| [skelWidth] | *number* | Optional | Defines the width in px (default: 100%) |
+
+#### [skelHeight]
+
+| Property | Type | Required |  |
+| --- | ---- | --- | --- |
+| [skelHeight] | *number* | Optional | Defines the width in px (default: 20px) |
+
+## Donation
+If this project help you reduce time to develop, you can donate me a cup of hot chocolate (:
+
+[Buy Me A Coffee](https://www.buymeacoffee.com/benraffetseder)
+
+
+## License
+
+[MIT](https://tldrlegal.com/license/mit-license) © [Benjamin Raffetseder](https://github.com/benjaminraffetseder)

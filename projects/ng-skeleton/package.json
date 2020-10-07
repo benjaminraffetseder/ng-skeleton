@@ -1,11 +1,27 @@
 {
   "name": "ng-skeleton",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "peerDependencies": {
     "@angular/common": "^10.0.14",
     "@angular/core": "^10.0.14"
   },
   "dependencies": {
     "tslib": "^2.0.0"
-  }
+  },
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminraffetseder/ng-skeleton.git"
+  },
+  "keywords": [
+    "angular",
+    "skeleton",
+    "skeleton-loading",
+    "angular2",
+    "ng2"
+  ],
+  "author": "Benjamin Raffetseder <hello@benjamin-raffetseder.com>",
+  "bugs": {
+    "url": "https://github.com/benjaminraffetseder/ng-skeleton/issues"
+  },
+  "homepage": "https://github.com/benjaminraffetseder/ng-skeleton#readme"
 }
