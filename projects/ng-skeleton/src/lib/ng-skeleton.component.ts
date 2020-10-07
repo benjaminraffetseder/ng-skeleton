@@ -7,8 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NgSkeletonComponent implements OnInit {
 
-  @Input() skelWidth: string;
-  @Input() skelHeight: string;
+  @Input() skelWidth: number;
+  @Input() skelHeight: number;
   @Input() skelCircle: boolean;
 
   constructor() { }
