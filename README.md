@@ -53,6 +53,10 @@ export class AppComponent {
 * [[skelCircle]](#skelCircle)
 * [[skelWidth]](#skelWidth)
 * [[skelHeight]](#skelHeight)
+* [[skelSpeed]](#skelSpeed)
+* [[skelBackground]](#skelBackground)
+* [[skelDark]](#skelDark)
+* [[skelLight]](#skelLight)
 
 #### [skelCircle]
 
@@ -71,6 +75,36 @@ export class AppComponent {
 | Property | Type | Required |  |
 | --- | ---- | --- | --- |
 | [skelHeight] | *number* | Optional | Defines the width in px (default: 20px) |
+
+#### [skelSpeed]
+
+| Property | Type | Required |  |
+| --- | ---- | --- | --- |
+| [skelSpeed] | *number* | Optional | Defines the animation speed (default: 1000ms) |
+
+#### [skelBackground]
+
+| Property | Type | Required |  |
+| --- | ---- | --- | --- |
+| [skelBackground] | *string* | Optional | Defines a custom background color |
+
+#### [skelBackground]
+
+| Property | Type | Required |  |
+| --- | ---- | --- | --- |
+| [skelBackground] | *string* | Optional | Defines a custom background color (Overrides skelDark/skelLight background color) |
+
+#### [skelDark]
+
+| Property | Type | Required |  |
+| --- | ---- | --- | --- |
+| [skelDark] | *boolean* | Optional | Turns the skeleton into dark mode |
+
+#### [skelLight]
+
+| Property | Type | Required |  |
+| --- | ---- | --- | --- |
+| [skelDark] | *boolean* | Optional | Turns the skeleton into light mode |
 
 ## Donation
 If this project help you reduce time to develop, you can donate me a cup of hot chocolate (:

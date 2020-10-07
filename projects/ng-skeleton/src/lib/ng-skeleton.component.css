@@ -1,23 +1,56 @@
+@media (prefers-color-scheme: dark) {
+  .loader {
+    background: #333;
+  }
+
+  .loader .indicator {
+    background: linear-gradient(90deg, transparent, rgba(90, 90, 90, 0.4), transparent);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .loader {
+    background: #ebebeb;
+  }
+
+  .loader .indicator {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+  }
+}
+
+.light {
+  background: #ebebeb;
+}
+
+.light .indicator {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+}
+
+.dark {
+  background: #333;
+}
+
+.dark .indicator {
+  background: linear-gradient(90deg, transparent, rgba(90, 90, 90, 0.4), transparent);
+}
+
+
 .loader {
   position: relative;
-  background-color: rgb(235, 235, 235);
   width: 100%;
   height: 20px;
   overflow: hidden;
   border-radius: 4px;
   margin-bottom: 4px;
-
 }
 
-.loader::after {
+
+.loader .indicator {
   display: block;
-  content: '';
   position: absolute;
   width: 100%;
   height: 100%;
   transform: translateX(-100%);
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
-  animation: loading 1s infinite;
 }
 
 @keyframes loading {

@@ -1,1 +1,3 @@
-<div [ngStyle]="getStyles()" class="skeleton loader"></div>
+<div [ngStyle]="skeletonOptions()" [ngClass]="{'dark': skelDark, 'light': skelLight}" class="skeleton loader">
+  <div [ngStyle]="loadingOptions()" class="indicator"></div>
+</div>
